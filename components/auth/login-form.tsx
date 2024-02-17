@@ -39,8 +39,8 @@ export const LoginForm = () => {
     setSuccess('');
     startTransition(() => {
       login(values).then((data) => {
-        setError(data.error);
-        setSuccess(data.success);
+        setError(data?.error);
+        setSuccess(data?.success);
       });
     });
   };
@@ -49,7 +49,7 @@ export const LoginForm = () => {
     <CardWrapper
       headerLabel="Welcome back"
       backButtonHref="/auth/register"
-      backButtonLabel="Don't Have an account?"
+      backButtonLabel="Doesn't have an account?"
       showSocial
     >
       <Form {...form}>
